@@ -3,316 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customer Survey / Market Research</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f7f6;
-            color: #333;
-            padding: 20px;
-        }
-        .container {
-            max-width: 750px;
-            margin: 20px auto;
-            background: #ffffff;
-            border-top: 6px solid #2a80b9;
-            border-radius: 4px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-        }
-        h1 {
-            font-size: 24px;
-            color: #2c3e50;
-            margin-bottom: 8px;
-        }
-        p.subtitle {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 25px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 15px;
-        }
-        .form-group {
-            margin-bottom: 25px;
-        }
-        label.question-title {
-            display: block;
-            font-weight: bold;
-            font-size: 15px;
-            margin-bottom: 8px;
-            color: #2c3e50;
-        }
-        label.question-title span.required {
-            color: #e74c3c;
-        }
-        select, input[type="text"], textarea {
-            width: 100%;
-            padding: 8px 10px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            font-size: 14px;
-            outline: none;
-        }
-        select:focus, input[type="text"]:focus, textarea:focus {
-            border-color: #2a80b9;
-        }
-        textarea {
-            height: 100px;
-            resize: vertical;
-        }
-        .radio-group, .checkbox-group {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            margin-top: 5px;
-        }
-        .radio-group label, .checkbox-group label {
-            font-weight: normal;
-            font-size: 14px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        /* Style cho Bảng Matrix / Scale Evaluation */
-        table.matrix-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-            font-size: 14px;
-        }
-        table.matrix-table th, table.matrix-table td {
-            border: 1px solid #e0e0e0;
-            padding: 10px;
-            text-align: center;
-        }
-        table.matrix-table th {
-            background-color: #f8f9fa;
-            font-weight: bold;
-            color: #555;
-        }
-        table.matrix-table td.statement {
-            text-align: left;
-            font-weight: 500;
-            background-color: #fafafa;
-            width: 40%;
-        }
-        table.matrix-table tr:nth-child(even) td.statement {
-            background-color: #f4f4f4;
-        }
-        .btn-submit {
-            background-color: #2a80b9;
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
-            padding: 10px 25px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-        .btn-submit:hover {
-            background-color: #1f6391;
-        }
-    </style>
-</head>
-<body>
-
-<div class="container">
-    <h1>Market Research Survey</h1>
-    <p class="subtitle">Please take a few minutes to give us feedback about our products and services.</p>
-
-    <form action="#" method="POST">
-        
-        <!-- Câu hỏi 1: Độ tuổi (Age Group) -->
-        <div class="form-group">
-            <label class="question-title">What is your age range? <span class="required">*</span></label>
-            <select name="age_range" required>
-                <option value="">-- Select Age --</option>
-                <option value="under_18">Under 18</option>
-                <option value="18_24">18 - 24</option>
-                <option value="25_34">25 - 34</option>
-                <option value="35_44">35 - 44</option>
-                <option value="45_54">45 - 54</option>
-                <option value="55_plus">55 or older</option>
-            </select>
-        </div>
-
-        <!-- Câu hỏi 2: Mức thu nhập (Income) -->
-        <div class="form-group">
-            <label class="question-title">What is your annual household income?</label>
-            <select name="income">
-                <option value="">-- Select Income --</option>
-                <option value="0_25k">$0 - $24,999</option>
-                <option value="25k_50k">$25,000 - $49,999</option>
-                <option value="50k_75k">$50,000 - $74,999</option>
-                <option value="75k_100k">$75,000 - $99,999</option>
-                <option value="100k_plus">$100,000 or more</option>
-            </select>
-        </div>
-
-        <!-- Câu hỏi 3: Giới tính (Gender) -->
-        <div class="form-group">
-            <label class="question-title">Gender</label>
-            <div class="radio-group">
-                <label><input type="radio" name="gender" value="male"> Male</label>
-                <label><input type="radio" name="gender" value="female"> Female</label>
-                <label><input type="radio" name="gender" value="non_binary"> Non-binary / Other</label>
-            </div>
-        </div>
-
-        <!-- Câu hỏi 4: Tần suất sử dụng (Frequency) -->
-        <div class="form-group">
-            <label class="question-title">How often do you use our product/service?</label>
-            <div class="radio-group">
-                <label><input type="radio" name="frequency" value="daily"> Daily</label>
-                <label><input type="radio" name="frequency" value="weekly"> Weekly</label>
-                <label><input type="radio" name="frequency" value="monthly"> Monthly</label>
-                <label><input type="radio" name="frequency" value="rarely"> Rarely</label>
-                <label><input type="radio" name="frequency" value="first_time"> First time user</label>
-            </div>
-        </div>
-
-        <!-- Câu hỏi 5: Bảng đánh giá Matrix (Satisfaction Ratings) -->
-        <div class="form-group">
-            <label class="question-title">Please rate your satisfaction with the following attributes:</label>
-            <table class="matrix-table">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>Very Unsatisfied</th>
-                        <th>Unsatisfied</th>
-                        <th>Neutral</th>
-                        <th>Satisfied</th>
-                        <th>Very Satisfied</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="statement">Product Quality</td>
-                        <td><input type="radio" name="rate_quality" value="1"></td>
-                        <td><input type="radio" name="rate_quality" value="2"></td>
-                        <td><input type="radio" name="rate_quality" value="3"></td>
-                        <td><input type="radio" name="rate_quality" value="4"></td>
-                        <td><input type="radio" name="rate_quality" value="5"></td>
-                    </tr>
-                    <tr>
-                        <td class="statement">Customer Service</td>
-                        <td><input type="radio" name="rate_service" value="1"></td>
-                        <td><input type="radio" name="rate_service" value="2"></td>
-                        <td><input type="radio" name="rate_service" value="3"></td>
-                        <td><input type="radio" name="rate_service" value="4"></td>
-                        <td><input type="radio" name="rate_service" value="5"></td>
-                    </tr>
-                    <tr>
-                        <td class="statement">Value for Money</td>
-                        <td><input type="radio" name="rate_value" value="1"></td>
-                        <td><input type="radio" name="rate_value" value="2"></td>
-                        <td><input type="radio" name="rate_value" value="3"></td>
-                        <td><input type="radio" name="rate_value" value="4"></td>
-                        <td><input type="radio" name="rate_value" value="5"></td>
-                    </tr>
-                    <tr>
-                        <td class="statement">Overall Experience</td>
-                        <td><input type="radio" name="rate_overall" value="1"></td>
-                        <td><input type="radio" name="rate_overall" value="2"></td>
-                        <td><input type="radio" name="rate_overall" value="3"></td>
-                        <td><input type="radio" name="rate_overall" value="4"></td>
-                        <td><input type="radio" name="rate_overall" value="5"></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Câu hỏi 6: Nhận xét thêm (Comments) -->
-        <div class="form-group">
-            <label class="question-title" for="comments">Do you have any comments or suggestions for us?</label>
-            <textarea id="comments" name="comments" placeholder="Type your feedback here..."></textarea>
-        </div>
-
-        <!-- Nút Submit -->
-        <div class="form-group">
-            <button type="submit" class="btn-submit">Submit Survey</button>
-        </div>
-
-    </form>
-</div>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danh sách sản phẩm</title>
+    <title>Lịch họp công ty</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f9f9f9;
+            margin: 30px;
+            background-color: #f8f9fa;
         }
         h1 {
-            color: #333;
+            color: #1a365d;
         }
         table {
             width: 100%;
-            max-width: 600px;
+            max-width: 700px;
             border-collapse: collapse;
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background-color: #ffffff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         }
         th, td {
-            border: 1px solid #ddd;
-            padding: 10px 15px;
+            border: 1px solid #cbd5e1;
+            padding: 12px 16px;
             text-align: left;
         }
         th {
-            background-color: #2c3e50;
-            color: white;
+            background-color: #2563eb;
+            color: #ffffff;
         }
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
+        tr:nth-child(even) td {
+            background-color: #f8fafc;
+        }
+        .highlight {
+            background-color: #fef3c7 !important;
+            font-weight: bold;
+            color: #92400e;
+            text-align: center;
         }
     </style>
 </head>
 <body>
 
-    <h1>Danh sách sản phẩm</h1>
+    <h1>Lịch họp công ty</h1>
 
     <table>
         <thead>
             <tr>
-                <th>Tên sản phẩm</th>
-                <th>Giá</th>
-                <th>Số lượng</th>
+                <th>Ngày</th>
+                <th>Giờ</th>
+                <th>Nội dung cuộc họp</th>
             </tr>
         </thead>
         <tbody>
+            <!-- Ngày Thứ Hai có 2 cuộc họp -> rowspan="2" ở ô Ngày -->
             <tr>
-                <td>Laptop Dell XPS 13</td>
-                <td>25.000.000 VNĐ</td>
-                <td>5</td>
+                <td rowspan="2">Thứ Hai (12/10)</td>
+                <td>08:30 - 10:00</td>
+                <td>Họp giao ban đầu tuần các Trưởng bộ phận</td>
             </tr>
             <tr>
-                <td>Điện thoại iPhone 15</td>
-                <td>22.500.000 VNĐ</td>
-                <td>12</td>
+                <td>14:00 - 15:30</td>
+                <td>Review tiến độ dự án Website E-commerce</td>
+            </tr>
+
+            <!-- Ngày Thứ Ba có cuộc họp kéo dài từ sáng đến chiều -> colspan="2" ở ô Giờ & Nội dung -->
+            <tr>
+                <td rowspan="2">Thứ Ba (13/10)</td>
+                <td>09:00 - 11:30</td>
+                <td>Họp định hướng Chiến lược Marketing Q4</td>
             </tr>
             <tr>
-                <td>Tai nghe Sony WH-1000XM5</td>
-                <td>6.800.000 VNĐ</td>
-                <td>8</td>
+                <!-- Cuộc họp kéo dài cả ngày: gộp cột Giờ và Nội dung bằng colspan="2" -->
+                <td colspan="2" class="highlight">13:30 - 17:00: Hội thảo Đào tạo An toàn thông tin (Tất cả nhân viên)</td>
             </tr>
+
+            <!-- Ngày Thứ Tư -->
             <tr>
-                <td>Bàn phím cơ Keychron K2</td>
-                <td>1.950.000 VNĐ</td>
-                <td>15</td>
+                <td>Thứ Tư (14/10)</td>
+                <td>10:00 - 11:30</td>
+                <td>Phỏng vấn ứng viên vị trí Frontend Developer</td>
             </tr>
         </tbody>
     </table>
