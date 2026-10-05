@@ -3,86 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lịch họp công ty</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 30px;
-            background-color: #f8f9fa;
-        }
-        h1 {
-            color: #1a365d;
-        }
-        table {
-            width: 100%;
-            max-width: 700px;
-            border-collapse: collapse;
-            background-color: #ffffff;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-        }
-        th, td {
-            border: 1px solid #cbd5e1;
-            padding: 12px 16px;
-            text-align: left;
-        }
-        th {
-            background-color: #2563eb;
-            color: #ffffff;
-        }
-        tr:nth-child(even) td {
-            background-color: #f8fafc;
-        }
-        .highlight {
-            background-color: #fef3c7 !important;
-            font-weight: bold;
-            color: #92400e;
-            text-align: center;
-        }
-    </style>
+    <title>Thực hành Danh sách trong CSS</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Lịch họp công ty</h1>
+    <h1>Bài Thực Hành: Định Kiểu Danh Sách trong CSS</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Ngày</th>
-                <th>Giờ</th>
-                <th>Nội dung cuộc họp</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Ngày Thứ Hai có 2 cuộc họp -> rowspan="2" ở ô Ngày -->
-            <tr>
-                <td rowspan="2">Thứ Hai (12/10)</td>
-                <td>08:30 - 10:00</td>
-                <td>Họp giao ban đầu tuần các Trưởng bộ phận</td>
-            </tr>
-            <tr>
-                <td>14:00 - 15:30</td>
-                <td>Review tiến độ dự án Website E-commerce</td>
-            </tr>
+    <!-- Phần 2: list-style-type hình vuông -->
+    <section>
+        <h2>2. Danh sách môn học (Dấu hình vuông - Square)</h2>
+        <ul class="subject-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Git</li>
+        </ul>
+    </section>
 
-            <!-- Ngày Thứ Ba có cuộc họp kéo dài từ sáng đến chiều -> colspan="2" ở ô Giờ & Nội dung -->
-            <tr>
-                <td rowspan="2">Thứ Ba (13/10)</td>
-                <td>09:00 - 11:30</td>
-                <td>Họp định hướng Chiến lược Marketing Q4</td>
-            </tr>
-            <tr>
-                <!-- Cuộc họp kéo dài cả ngày: gộp cột Giờ và Nội dung bằng colspan="2" -->
-                <td colspan="2" class="highlight">13:30 - 17:00: Hội thảo Đào tạo An toàn thông tin (Tất cả nhân viên)</td>
-            </tr>
+    <!-- Phần 3: list-style-type Số La Mã -->
+    <section>
+        <h2>3. Danh sách các bước học (Số La Mã - Upper Roman)</h2>
+        <ol class="step-list">
+            <li>Học HTML</li>
+            <li>Học CSS</li>
+            <li>Học JavaScript</li>
+            <li>Học Git</li>
+        </ol>
+    </section>
 
-            <!-- Ngày Thứ Tư -->
-            <tr>
-                <td>Thứ Tư (14/10)</td>
-                <td>10:00 - 11:30</td>
-                <td>Phỏng vấn ứng viên vị trí Frontend Developer</td>
-            </tr>
-        </tbody>
-    </table>
+    <!-- Phần 4: list-style-image -->
+    <section>
+        <h2>4. Công cụ học tập (Hình ảnh đánh dấu - Image)</h2>
+        <ul class="tool-list">
+            <li>Visual Studio Code</li>
+            <li>Google Chrome</li>
+            <li>GitHub</li>
+            <li>Git</li>
+        </ul>
+    </section>
+
+    <!-- Phần 5: list-style-position outside vs inside -->
+    <section>
+        <h2>5. Vị trí dấu đánh dấu (Outside vs Inside)</h2>
+        <h3>Outside (Mặc định - Dấu đánh dấu nằm ngoài khối nội dung):</h3>
+        <ul class="pos-outside">
+            <li>HTML - Ngôn ngữ đánh dấu siêu văn bản dùng để dựng cấu trúc trang.</li>
+            <li>CSS - Ngôn ngữ định kiểu cho trang web đẹp hơn.</li>
+        </ul>
+
+        <h3>Inside (Dấu đánh dấu nằm trong khối nội dung):</h3>
+        <ul class="pos-inside">
+            <li>HTML - Ngôn ngữ đánh dấu siêu văn bản dùng để dựng cấu trúc trang.</li>
+            <li>CSS - Ngôn ngữ định kiểu cho trang web đẹp hơn.</li>
+        </ul>
+    </section>
+
+    <!-- Phần 6: Thuộc tính rút gọn list-style -->
+    <section>
+        <h2>6. Sử dụng thuộc tính rút gọn (list-style)</h2>
+        <ul class="shorthand-list">
+            <li>Bài học 1</li>
+            <li>Bài học 2</li>
+            <li>Bài học 3</li>
+        </ul>
+    </section>
+
+    <!-- Phần 7: Định kiểu màu sắc và khoảng cách -->
+    <section>
+        <h2>7. Ngôn ngữ lập trình (Màu sắc & Khoảng cách)</h2>
+        <ul class="styled-languages">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+        </ul>
+    </section>
+
+    <!-- Phần 8: Bài tập tổng hợp - Lộ trình học lập trình Web -->
+    <section>
+        <h2>8. Lộ trình học lập trình Web (Tổng hợp)</h2>
+        <ol class="web-roadmap">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Git</li>
+            <li>GitHub</li>
+        </ol>
+    </section>
 
 </body>
 </html>
+/* Cấu hình chung cho trang */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f6f9;
+    color: #333;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+section {
+    background: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+h2 {
+    color: #2980b9;
+    font-size: 18px;
+    margin-top: 0;
+}
+
+/* --------------------------------------------------
+   PHẦN 2: Thay đổi kiểu đánh dấu thành hình vuông
+   -------------------------------------------------- */
+.subject-list {
+    list-style-type: square;
+}
+
+/* --------------------------------------------------
+   PHẦN 3: Đánh số bằng chữ số La Mã viết hoa
+   -------------------------------------------------- */
+.step-list {
+    list-style-type: upper-roman;
+}
+
+/* --------------------------------------------------
+   PHẦN 4: Sử dụng hình ảnh làm dấu đánh dấu
+   -------------------------------------------------- */
+.tool-list {
+    /* Thay url(...) bằng link ảnh icon thực tế của bạn nếu có */
+    list-style-image: url('https://cdn-icons-png.flaticon.com/16/1828/1828640.png');
+}
+
+/* --------------------------------------------------
+   PHẦN 5: Thay đổi vị trí dấu đánh dấu (Outside & Inside)
+   -------------------------------------------------- */
+.pos-outside {
+    list-style-position: outside;
+    background-color: #eef9ff;
+    padding-left: 30px;
+}
+
+.pos-inside {
+    list-style-position: inside;
+    background-color: #fcf0f0;
+    padding-left: 15px;
+}
+
+.pos-outside li, .pos-inside li {
+    border: 1px dashed #ccc;
+    margin-bottom: 5px;
+}
+
+/* --------------------------------------------------
+   PHẦN 6: Sử dụng thuộc tính rút gọn list-style
+   Cú pháp: list-style: [type] [position] [image];
+   -------------------------------------------------- */
+.shorthand-list {
+    list-style: square inside url('https://cdn-icons-png.flaticon.com/16/1828/1828640.png');
+}
+
+/* --------------------------------------------------
+   PHẦN 7: Định kiểu màu sắc và khoảng cách
+   -------------------------------------------------- */
+.styled-languages {
+    background-color: #2c3e50;
+    padding: 20px 40px;
+    border-radius: 6px;
+    list-style-type: circle;
+}
+
+.styled-languages li {
+    color: #ecf0f1;
+    background-color: #34495e;
+    margin-bottom: 8px;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+/* --------------------------------------------------
+   PHẦN 8: Bài tập tổng hợp - Lộ trình học lập trình Web
+   -------------------------------------------------- */
+.web-roadmap {
+    /* Thuộc tính rút gọn: Kiểu chữ số La Mã thường, vị trí bên trong */
+    list-style: lower-roman inside;
+    background-color: #e8f8f5;
+    padding: 20px;
+    border-left: 5px solid #1abc9c;
+    border-radius: 4px;
+}
+
+.web-roadmap li {
+    color: #16a085;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border: 1px solid #d1f2eb;
+    border-radius: 4px;
+}
