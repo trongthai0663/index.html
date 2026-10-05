@@ -3,94 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thực hành Danh sách trong CSS</title>
+    <title>Thực hành Bảng trong CSS</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Bài Thực Hành: Định Kiểu Danh Sách trong CSS</h1>
+    <h2>Danh sách học viên - Định kiểu với CSS</h2>
 
-    <!-- Phần 2: list-style-type hình vuông -->
-    <section>
-        <h2>2. Danh sách môn học (Dấu hình vuông - Square)</h2>
-        <ul class="subject-list">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Git</li>
-        </ul>
-    </section>
-
-    <!-- Phần 3: list-style-type Số La Mã -->
-    <section>
-        <h2>3. Danh sách các bước học (Số La Mã - Upper Roman)</h2>
-        <ol class="step-list">
-            <li>Học HTML</li>
-            <li>Học CSS</li>
-            <li>Học JavaScript</li>
-            <li>Học Git</li>
-        </ol>
-    </section>
-
-    <!-- Phần 4: list-style-image -->
-    <section>
-        <h2>4. Công cụ học tập (Hình ảnh đánh dấu - Image)</h2>
-        <ul class="tool-list">
-            <li>Visual Studio Code</li>
-            <li>Google Chrome</li>
-            <li>GitHub</li>
-            <li>Git</li>
-        </ul>
-    </section>
-
-    <!-- Phần 5: list-style-position outside vs inside -->
-    <section>
-        <h2>5. Vị trí dấu đánh dấu (Outside vs Inside)</h2>
-        <h3>Outside (Mặc định - Dấu đánh dấu nằm ngoài khối nội dung):</h3>
-        <ul class="pos-outside">
-            <li>HTML - Ngôn ngữ đánh dấu siêu văn bản dùng để dựng cấu trúc trang.</li>
-            <li>CSS - Ngôn ngữ định kiểu cho trang web đẹp hơn.</li>
-        </ul>
-
-        <h3>Inside (Dấu đánh dấu nằm trong khối nội dung):</h3>
-        <ul class="pos-inside">
-            <li>HTML - Ngôn ngữ đánh dấu siêu văn bản dùng để dựng cấu trúc trang.</li>
-            <li>CSS - Ngôn ngữ định kiểu cho trang web đẹp hơn.</li>
-        </ul>
-    </section>
-
-    <!-- Phần 6: Thuộc tính rút gọn list-style -->
-    <section>
-        <h2>6. Sử dụng thuộc tính rút gọn (list-style)</h2>
-        <ul class="shorthand-list">
-            <li>Bài học 1</li>
-            <li>Bài học 2</li>
-            <li>Bài học 3</li>
-        </ul>
-    </section>
-
-    <!-- Phần 7: Định kiểu màu sắc và khoảng cách -->
-    <section>
-        <h2>7. Ngôn ngữ lập trình (Màu sắc & Khoảng cách)</h2>
-        <ul class="styled-languages">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Python</li>
-        </ul>
-    </section>
-
-    <!-- Phần 8: Bài tập tổng hợp - Lộ trình học lập trình Web -->
-    <section>
-        <h2>8. Lộ trình học lập trình Web (Tổng hợp)</h2>
-        <ol class="web-roadmap">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Git</li>
-            <li>GitHub</li>
-        </ol>
-    </section>
+    <table>
+        <thead>
+            <tr>
+                <th>Họ tên</th>
+                <th>Tuổi</th>
+                <th>Lớp</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Nguyễn Văn A</td>
+                <td>20</td>
+                <td>Web</td>
+            </tr>
+            <tr>
+                <td>Trần Thị B</td>
+                <td>21</td>
+                <td>Web</td>
+            </tr>
+            <tr>
+                <td>Lê Văn C</td>
+                <td>22</td>
+                <td>Mobile</td>
+            </tr>
+        </tbody>
+    </table>
 
 </body>
 </html>
