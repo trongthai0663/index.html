@@ -3,47 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang web của tôi</title>
+    <title>Form đăng ký người dùng</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .registration-card {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 420px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .registration-card h2 {
+            text-align: center;
+            color: #1877f2;
+            margin-bottom: 24px;
+            font-size: 24px;
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #333333;
+            font-size: 14px;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"] {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #cccccc;
+            border-radius: 6px;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .form-group input[type="text"]:focus,
+        .form-group input[type="email"]:focus,
+        .form-group input[type="tel"]:focus {
+            border-color: #1877f2;
+        }
+        .gender-options {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-top: 6px;
+        }
+        .gender-options label {
+            font-weight: normal;
+            font-size: 14px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .btn-submit {
+            width: 100%;
+            padding: 12px;
+            background-color: #1877f2;
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.2s;
+        }
+        .btn-submit:hover {
+            background-color: #166fe5;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Chào mừng đến với trang web của tôi</h1>
+    <div class="registration-card">
+        <h2>Đăng Ký Người Dùng</h2>
+        
+        <!-- Thẻ form với action và method đúng theo yêu cầu -->
+        <form action="http://demo.codegym.vn/6/registration_form/register.php" method="POST">
+            
+            <!-- Trường Họ và tên -->
+            <div class="form-group">
+                <label for="name">Họ và tên:</label>
+                <input type="text" id="name" name="name" placeholder="Nhập họ và tên" required>
+            </div>
 
-    <h2>Giới thiệu bản thân</h2>
+            <!-- Trường Email -->
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Nhập địa chỉ email" required>
+            </div>
 
-    <p>Sở thích của tôi là đọc sách, nghe nhạc và khám phá các công nghệ mới trong thời gian rảnh rỗi.</p>
+            <!-- Trường Số điện thoại -->
+            <div class="form-group">
+                <label for="phone">Số điện thoại:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại" required>
+            </div>
 
-    <p>Mục tiêu học lập trình của tôi là nắm vững kiến thức Frontend (HTML, CSS, JavaScript) để có thể tự tay xây dựng các trang web hoàn chỉnh và trở thành một lập trình viên chuyên nghiệp.</p>
+            <!-- Trường Giới tính -->
+            <div class="form-group">
+                <label>Giới tính:</label>
+                <div class="gender-options">
+                    <label>
+                        <input type="radio" name="gender" value="nam" checked> Nam
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="nu"> Nữ
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="khac"> Khác
+                    </label>
+                </div>
+            </div>
+
+            <!-- Nút gửi dữ liệu -->
+            <button type="submit" class="btn-submit">Đăng Ký</button>
+
+        </form>
+    </div>
 
 </body>
-</html>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Gộp ô trong bảng</title>
-    </head>
-    <body>
-        <h2>Thời khóa biểu</h2>
-        <table border="1">
-            <tr>
-                <th>Thứ</th>
-                <th>Môn học</th>
-                <th>Giáo viên</th>
-            </tr>
-            <tr>
-                <td rowspan="2">Thứ Hai</td>
-                <td>Toán</td>
-                <td>Thầy Nam</td>
-            </tr>
-            <tr>
-                <td>Văn</td>
-                <td>Cô Hạnh</td>
-            </tr>
-            <tr>
-                <td>Thứ Ba</td>
-                <td colspan="2">Nghỉ học</td>
-            </tr>
-        </table>
-    </body>
 </html>
