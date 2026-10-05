@@ -2,42 +2,30 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>1. Inline Style</title>
-</head>
-<body>
-
-    <!-- Thay đổi màu bằng Inline CSS -->
-    <h1 style="color: #e74c3c;">Tiêu đề bài viết (Inline CSS)</h1>
-    <p style="color: #27ae60;">Đoạn văn bản mẫu được áp dụng màu sắc trực tiếp qua thuộc tính style.</p>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <title>1. Inline Style</title>
-</head>
-<body>
-
-    <!-- Thay đổi màu bằng Inline CSS -->
-    <h1 style="color: #e74c3c;">Tiêu đề bài viết (Inline CSS)</h1>
-    <p style="color: #27ae60;">Đoạn văn bản mẫu được áp dụng màu sắc trực tiếp qua thuộc tính style.</p>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <title>3. External Style</title>
-    <!-- Liên kết file CSS bên ngoài -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sử dụng bộ chọn CSS</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Tiêu đề bài viết (External CSS)</h1>
-    <p>Đoạn văn bản mẫu được áp dụng màu sắc từ tập tin CSS bên ngoài.</p>
+    <!-- Element selector -->
+    <h1 id="main-title">Trang web của tôi</h1>
+
+    <!-- Class selector -->
+    <p class="description">
+        Xin chào! Tôi là một lập trình viên web tương lai. Tôi thích sáng tạo các trang web đẹp và hữu ích.
+    </p>
+
+    <h2>Sở thích của tôi</h2>
+    <!-- List với class selector -->
+    <ul class="hobby-list">
+        <li class="hobby-item item-1">Đọc sách công nghệ</li>
+        <li class="hobby-item item-2">Lập trình web</li>
+        <li class="hobby-item item-3">Chơi thể thao</li>
+    </ul>
+
+    <!-- Button với pseudo-class :hover -->
+    <button class="btn-action">Nhấn vào đây</button>
 
 </body>
 </html>
